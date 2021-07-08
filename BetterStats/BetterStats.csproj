@@ -8,7 +8,7 @@
     <OutputType>Library</OutputType>
     <RootNamespace>DSM.BetterStats</RootNamespace>
     <AssemblyName>BetterStats</AssemblyName>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
@@ -38,6 +38,8 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -47,6 +49,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup>
     <StartupObject />
@@ -70,45 +73,45 @@
   </ItemGroup>
   <ItemGroup>
     <Reference Include="0Harmony">
-      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Dyson Sphere Program\BepInEx\core\0Harmony.dll</HintPath>
+      <HintPath>..\Lib\0Harmony.dll</HintPath>
     </Reference>
-    <Reference Include="Assembly-CSharp.refstub">
-      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Dyson Sphere Program\DSPGAME_Data\Managed\refstub\Assembly-CSharp.refstub.dll</HintPath>
+    <Reference Include="Assembly-CSharp_publicized">
+      <HintPath>..\Lib\Assembly-CSharp_publicized.dll</HintPath>
     </Reference>
     <Reference Include="BepInEx">
-      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Dyson Sphere Program\BepInEx\core\BepInEx.dll</HintPath>
+      <HintPath>..\Lib\BepInEx.dll</HintPath>
     </Reference>
     <Reference Include="BepInEx.Harmony">
-      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Dyson Sphere Program\BepInEx\core\BepInEx.Harmony.dll</HintPath>
+      <HintPath>..\Lib\BepInEx.Harmony.dll</HintPath>
     </Reference>
     <Reference Include="Mono.Cecil">
-      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Dyson Sphere Program\BepInEx\core\Mono.Cecil.dll</HintPath>
+      <HintPath>..\Lib\Mono.Cecil.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Dyson Sphere Program\DSPGAME_Data\Managed\netstandard.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine">
-      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Dyson Sphere Program\BepInEx\DowngradedAssemblies\UnityEngine.dll</HintPath>
+      <HintPath>..\Lib\UnityEngine.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.CoreModule">
-      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Dyson Sphere Program\DSPGAME_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+      <HintPath>..\Lib\UnityEngine.CoreModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.JSONSerializeModule">
-      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Dyson Sphere Program\DSPGAME_Data\Managed\UnityEngine.JSONSerializeModule.dll</HintPath>
+      <HintPath>..\Lib\UnityEngine.JSONSerializeModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.TextRenderingModule">
-      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Dyson Sphere Program\DSPGAME_Data\Managed\UnityEngine.TextRenderingModule.dll</HintPath>
+      <HintPath>..\Lib\UnityEngine.TextRenderingModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Dyson Sphere Program\DSPGAME_Data\Managed\UnityEngine.UI.dll</HintPath>
+      <HintPath>..\Lib\UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UIModule">
-      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Dyson Sphere Program\DSPGAME_Data\Managed\UnityEngine.UIModule.dll</HintPath>
+      <HintPath>..\Lib\UnityEngine.UIModule.dll</HintPath>
     </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>copy $(TargetPath) "C:\Program Files (x86)\Steam\steamapps\common\Dyson Sphere Program\BepInEx\scripts\$(TargetFileName)"
+    <PostBuildEvent>copy "$(TargetPath)" "D:\Program Files (x86)\Steam\steamapps\common\Dyson Sphere Program\BepInEx\scripts\$(TargetFileName)"
 </PostBuildEvent>
   </PropertyGroup>
 </Project>

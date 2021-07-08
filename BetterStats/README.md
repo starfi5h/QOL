@@ -6,6 +6,10 @@ This mod improves the production stats panel to add the count of producer/consum
 
 ## Changelog
 
+### v1.2.1
+
+-   FIX: Adapt new game release 0.7.18.7275 (2021/7/6)
+
 ### v1.2.0
 
 -   FEAT: allow to filter stats by item name
